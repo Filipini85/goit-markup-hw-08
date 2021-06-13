@@ -1,0 +1,216 @@
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: var(--background-header);
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0px;
+}
+
+.button-close__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .button-close:hover &,
+  .button-close:focus & {
+    fill: var(--active-elements);
+  }
+}
+
+.modal-form {
+  padding: 40px;
+  margin-right: 0px;
+}
+
+.modal-form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 12px;
+  color: var(--title-text);
+}
+
+.modal-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  color: var(--description-text);
+}
+
+.modal-form__item {
+  display: flex;
+  position: relative;
+}
+
+.modal-form__input {
+  margin-bottom: 10px;
+  padding: 11px 12px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-within {
+    border: 1px solid var(--active-elements);
+    outline: currentColor;
+  }
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal-form__input:focus ~ & {
+    fill: var(--active-elements);
+  }
+}
+
+.modal-form__textarea {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border: 1px solid var(--active-elements);
+    outline: currentColor;
+  }
+}
+
+.modal-form__textarea::placeholder {
+  font-size: 12px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  padding-bottom: 30px;
+}
+
+.checkbox__item {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.checkbox__input {
+  position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox__icon {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  margin-left: 12px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transform: translateY(20%);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__input:checked + .checkbox__icon {
+  border-color: var(--active-elements);
+  background-color: var(--active-elements);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__link {
+  color: var(--active-elements);
+  text-decoration-skip-ink: none;
+}
+
+.modal-button {
+  background-color: var(--active-elements);
+  color: var(--background-header);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 10px 55px 10px 56px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}

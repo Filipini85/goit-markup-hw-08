@@ -1,0 +1,90 @@
+:root {
+  --active-elements: rgba(33, 150, 243, 1);
+
+  --title-text: rgba(33, 33, 33, 1);
+
+  --description-text: rgba(117, 117, 117, 1);
+
+  --hero-title: rgba(255, 255, 255, 1);
+
+  --footer-contacts-op60: rgba(255, 255, 255, 0.6);
+
+  --background-header: rgba(255, 255, 255, 1);
+
+  --background-hero: rgba(47, 48, 58, 1);
+
+  --backgound-team: rgba(245, 244, 250, 1);
+
+  --icons-color: rgba(175, 177, 184, 1);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: var(--background-header);
+}
+
+footer {
+  background-color: var(--background-hero);
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  max-width: 480px;
+  min-width: 320px;
+  padding: 0px 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
